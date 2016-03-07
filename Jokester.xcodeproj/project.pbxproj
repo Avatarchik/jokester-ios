@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6100E3321C8B3F6B009DB336 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6100E3311C8B3F6B009DB336 /* logo.png */; };
 		61F064B21C7F7E4600E798BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F064B11C7F7E4600E798BD /* AppDelegate.swift */; };
 		61F064B41C7F7E4600E798BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F064B31C7F7E4600E798BD /* ViewController.swift */; };
 		61F064B71C7F7E4600E798BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F064B51C7F7E4600E798BD /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6100E3311C8B3F6B009DB336 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		61F064AE1C7F7E4600E798BD /* Jokester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F064B11C7F7E4600E798BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61F064B31C7F7E4600E798BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6100E3301C8B3F5F009DB336 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6100E3311C8B3F6B009DB336 /* logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		61F064A51C7F7E4600E798BD = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		61F064B01C7F7E4600E798BD /* Jokester */ = {
 			isa = PBXGroup;
 			children = (
+				6100E3301C8B3F5F009DB336 /* Images */,
 				61F064B11C7F7E4600E798BD /* AppDelegate.swift */,
 				61F064B31C7F7E4600E798BD /* ViewController.swift */,
 				61F064B51C7F7E4600E798BD /* Main.storyboard */,
@@ -125,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6100E3321C8B3F6B009DB336 /* logo.png in Resources */,
 				61F064BF1C7F7E4600E798BD /* LaunchScreen.storyboard in Resources */,
 				61F064BC1C7F7E4600E798BD /* Assets.xcassets in Resources */,
 				61F064B71C7F7E4600E798BD /* Main.storyboard in Resources */,
@@ -252,6 +264,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Jokester/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polarhills.Jokester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -263,6 +276,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Jokester/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polarhills.Jokester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,6 +302,7 @@
 				61F064C51C7F7E4600E798BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

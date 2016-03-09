@@ -3,24 +3,365 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Jokester" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Jokester" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="LsE-61-JLQ">
+                                <rect key="frame" x="85" y="174" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="JCC-QZ-fTj"/>
+                                    <constraint firstAttribute="height" constant="150" id="SVn-2j-7dx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnO-Oe-erB">
+                                <rect key="frame" x="20" y="498" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Me9-5U-k9r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login_button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qMs-Ij-GAD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.24705882352941178" green="0.61960784313725492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QnO-Oe-erB" secondAttribute="bottom" constant="20" id="7hA-i8-PTg"/>
+                            <constraint firstItem="QnO-Oe-erB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TFL-7j-J5D"/>
+                            <constraint firstItem="QnO-Oe-erB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c6F-5A-K1t"/>
+                            <constraint firstItem="LsE-61-JLQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-35" id="pCu-9E-cdQ"/>
+                            <constraint firstItem="LsE-61-JLQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tXw-IR-unW"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="login_button" destination="QnO-Oe-erB" id="YAb-w0-7fo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="214" y="276"/>
+        </scene>
+        <!--Age View Controller-->
+        <scene sceneID="Bfc-F7-46Y">
+            <objects>
+                <viewController storyboardIdentifier="AgeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kM7-59-oJe" customClass="AgeViewController" customModule="Jokester" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cnr-d7-Aua"/>
+                        <viewControllerLayoutGuide type="bottom" id="QqP-BU-q03"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ipS-Gl-BkW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQL-1t-MBn">
+                                <rect key="frame" x="20" y="316" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Lx1-27-bmg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="next_button:" destination="kM7-59-oJe" eventType="touchUpInside" id="weg-nW-TF5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLM-Bn-F3r">
+                                <rect key="frame" x="20" y="258" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6aV-Gv-imL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="How old are you?">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="age_button:" destination="kM7-59-oJe" eventType="touchUpInside" id="HrL-M6-38r"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="We want to show you more age-appropriate jokes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ssN-fR-h7y">
+                                <rect key="frame" x="20" y="528" width="280" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bdl-KL-Rmc">
+                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098039215686274" green="0.41568627450980389" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pQL-1t-MBn" firstAttribute="leading" secondItem="ipS-Gl-BkW" secondAttribute="leadingMargin" id="DOS-zG-x3f"/>
+                            <constraint firstItem="jLM-Bn-F3r" firstAttribute="leading" secondItem="ipS-Gl-BkW" secondAttribute="leadingMargin" id="Fh7-ho-KhN"/>
+                            <constraint firstItem="pQL-1t-MBn" firstAttribute="trailing" secondItem="ipS-Gl-BkW" secondAttribute="trailingMargin" id="ME2-4I-qjU"/>
+                            <constraint firstItem="jLM-Bn-F3r" firstAttribute="trailing" secondItem="ipS-Gl-BkW" secondAttribute="trailingMargin" id="NE0-5V-yCN"/>
+                            <constraint firstItem="QqP-BU-q03" firstAttribute="top" secondItem="ssN-fR-h7y" secondAttribute="bottom" constant="20" id="Q0n-1y-A8P"/>
+                            <constraint firstItem="jLM-Bn-F3r" firstAttribute="centerY" secondItem="ipS-Gl-BkW" secondAttribute="centerY" constant="-35" id="QE1-kq-kE4"/>
+                            <constraint firstItem="jLM-Bn-F3r" firstAttribute="centerX" secondItem="ipS-Gl-BkW" secondAttribute="centerX" id="Qks-GG-1J4"/>
+                            <constraint firstItem="QqP-BU-q03" firstAttribute="top" secondItem="bdl-KL-Rmc" secondAttribute="bottom" id="T9r-4n-htd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bdl-KL-Rmc" secondAttribute="trailing" constant="-20" id="Uyi-ex-g7O"/>
+                            <constraint firstItem="ssN-fR-h7y" firstAttribute="leading" secondItem="ipS-Gl-BkW" secondAttribute="leadingMargin" id="c7z-yV-LKh"/>
+                            <constraint firstItem="bdl-KL-Rmc" firstAttribute="leading" secondItem="ipS-Gl-BkW" secondAttribute="leadingMargin" constant="-20" id="cE8-OL-Y2D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ssN-fR-h7y" secondAttribute="trailing" id="mUV-Ln-peR"/>
+                            <constraint firstItem="pQL-1t-MBn" firstAttribute="top" secondItem="jLM-Bn-F3r" secondAttribute="bottom" constant="10" id="pPQ-oH-tSK"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="age_button" destination="jLM-Bn-F3r" id="Myu-ki-u6a"/>
+                        <outlet property="age_picker" destination="bdl-KL-Rmc" id="Ora-8I-mrW"/>
+                        <outlet property="next_button" destination="pQL-1t-MBn" id="0b1-kj-kBR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USW-Po-Ozs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="276"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="2Qz-Re-CH6">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X6d-aY-lvU" customClass="MainViewController" customModule="Jokester" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OkM-La-dNs"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZZZ-SW-XGZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yhw-02-dFv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcR-3R-jkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="915"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="Cf0-l7-2PB">
+            <objects>
+                <viewController storyboardIdentifier="LocationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hGt-ZL-GFu" customClass="LocationViewController" customModule="Jokester" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="htM-Dr-VM2"/>
+                        <viewControllerLayoutGuide type="bottom" id="jgJ-yy-lh4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bYc-x8-RXS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ing-Ip-ZcS">
+                                <rect key="frame" x="20" y="316" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="O5c-Jj-VNt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="next_button:" destination="PxB-Kg-rTM" eventType="touchUpInside" id="FZw-Q8-QIQ"/>
+                                    <action selector="next_button:" destination="hGt-ZL-GFu" eventType="touchUpInside" id="y5U-Ya-VLY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="We want to show you more location-specific jokes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pwn-na-gDV">
+                                <rect key="frame" x="17" y="524" width="283" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwb-co-HNr">
+                                <rect key="frame" x="20" y="258" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Ws-dQ-QSZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Where do you live?">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="gender_button:" destination="PxB-Kg-rTM" eventType="touchUpInside" id="ZN3-UY-IZ0"/>
+                                    <action selector="location_button:" destination="hGt-ZL-GFu" eventType="touchUpInside" id="fcw-Qi-jXd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60392156862745094" green="0.25098039215686274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jgJ-yy-lh4" firstAttribute="top" secondItem="pwn-na-gDV" secondAttribute="bottom" constant="20" id="0Ak-nw-DBq"/>
+                            <constraint firstItem="wwb-co-HNr" firstAttribute="trailing" secondItem="bYc-x8-RXS" secondAttribute="trailingMargin" id="4HR-K8-B2v"/>
+                            <constraint firstItem="pwn-na-gDV" firstAttribute="trailing" secondItem="bYc-x8-RXS" secondAttribute="trailingMargin" id="8oQ-MV-ZeG"/>
+                            <constraint firstItem="Ing-Ip-ZcS" firstAttribute="leading" secondItem="bYc-x8-RXS" secondAttribute="leadingMargin" id="LuW-LY-nNP"/>
+                            <constraint firstItem="wwb-co-HNr" firstAttribute="centerX" secondItem="bYc-x8-RXS" secondAttribute="centerX" id="PAG-hM-sGe"/>
+                            <constraint firstItem="Ing-Ip-ZcS" firstAttribute="top" secondItem="wwb-co-HNr" secondAttribute="bottom" constant="10" id="PqE-Uq-WkG"/>
+                            <constraint firstItem="Ing-Ip-ZcS" firstAttribute="trailing" secondItem="bYc-x8-RXS" secondAttribute="trailingMargin" id="RlT-dE-gk9"/>
+                            <constraint firstItem="pwn-na-gDV" firstAttribute="leading" secondItem="bYc-x8-RXS" secondAttribute="leadingMargin" id="Ywf-cV-cPL"/>
+                            <constraint firstItem="wwb-co-HNr" firstAttribute="centerY" secondItem="bYc-x8-RXS" secondAttribute="centerY" constant="-35" id="iex-Oj-4VV"/>
+                            <constraint firstItem="Ing-Ip-ZcS" firstAttribute="top" secondItem="wwb-co-HNr" secondAttribute="bottom" constant="10" id="p2U-sP-EMp"/>
+                            <constraint firstItem="wwb-co-HNr" firstAttribute="leading" secondItem="bYc-x8-RXS" secondAttribute="leadingMargin" id="u2j-7k-1xk"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="location_button" destination="wwb-co-HNr" id="5N6-9K-Fhr"/>
+                        <outlet property="next_button" destination="Ing-Ip-ZcS" id="MqY-GQ-awc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcn-8P-iBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1288" y="276"/>
+        </scene>
+        <!--Gender View Controller-->
+        <scene sceneID="Wfs-m2-6Hr">
+            <objects>
+                <viewController storyboardIdentifier="GenderViewController" id="PxB-Kg-rTM" customClass="GenderViewController" customModule="Jokester" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xKh-fF-PpH"/>
+                        <viewControllerLayoutGuide type="bottom" id="9RB-g3-5JX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5P2-qX-OY5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWD-Cv-miy">
+                                <rect key="frame" x="20" y="316" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IXu-df-DDf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="next_button:" destination="PxB-Kg-rTM" eventType="touchUpInside" id="ce2-bs-SAF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMS-it-tEm">
+                                <rect key="frame" x="20" y="258" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7oa-W7-TkE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="What is your gender?">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="gender_button:" destination="PxB-Kg-rTM" eventType="touchUpInside" id="4T3-vn-0wq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="We want to show you more gender-specific jokes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5tp-Mo-OoO">
+                                <rect key="frame" x="20" y="524" width="280" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45F-fP-z3r">
+                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.25098039215686274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="45F-fP-z3r" firstAttribute="leading" secondItem="5P2-qX-OY5" secondAttribute="leadingMargin" constant="-20" id="5gu-Ju-VRr"/>
+                            <constraint firstItem="jWD-Cv-miy" firstAttribute="top" secondItem="rMS-it-tEm" secondAttribute="bottom" constant="10" id="6B8-Up-DMj"/>
+                            <constraint firstItem="rMS-it-tEm" firstAttribute="centerX" secondItem="5P2-qX-OY5" secondAttribute="centerX" id="8g1-OS-3UO"/>
+                            <constraint firstItem="jWD-Cv-miy" firstAttribute="trailing" secondItem="5P2-qX-OY5" secondAttribute="trailingMargin" id="AoY-QJ-vCM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="45F-fP-z3r" secondAttribute="trailing" constant="-20" id="Gna-jI-mY2"/>
+                            <constraint firstItem="9RB-g3-5JX" firstAttribute="top" secondItem="5tp-Mo-OoO" secondAttribute="bottom" constant="20" id="H9C-ja-J7M"/>
+                            <constraint firstItem="9RB-g3-5JX" firstAttribute="top" secondItem="45F-fP-z3r" secondAttribute="bottom" id="IK1-D4-Y3w"/>
+                            <constraint firstItem="jWD-Cv-miy" firstAttribute="top" secondItem="rMS-it-tEm" secondAttribute="bottom" constant="10" id="aIu-JG-hPx"/>
+                            <constraint firstItem="5tp-Mo-OoO" firstAttribute="trailing" secondItem="5P2-qX-OY5" secondAttribute="trailingMargin" id="ggH-Rf-Tlj"/>
+                            <constraint firstItem="5tp-Mo-OoO" firstAttribute="leading" secondItem="5P2-qX-OY5" secondAttribute="leadingMargin" id="kLo-Lz-m60"/>
+                            <constraint firstItem="rMS-it-tEm" firstAttribute="trailing" secondItem="5P2-qX-OY5" secondAttribute="trailingMargin" id="mWe-VX-DzL"/>
+                            <constraint firstItem="jWD-Cv-miy" firstAttribute="leading" secondItem="5P2-qX-OY5" secondAttribute="leadingMargin" id="qaG-Wu-Riy"/>
+                            <constraint firstItem="rMS-it-tEm" firstAttribute="centerY" secondItem="5P2-qX-OY5" secondAttribute="centerY" constant="-35" id="ugo-eR-0eq"/>
+                            <constraint firstItem="rMS-it-tEm" firstAttribute="leading" secondItem="5P2-qX-OY5" secondAttribute="leadingMargin" id="wF6-0H-qjw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6B8-Up-DMj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="gender_button" destination="rMS-it-tEm" id="7Pl-7v-bcq"/>
+                        <outlet property="gender_picker" destination="45F-fP-z3r" id="oMX-cW-UOK"/>
+                        <outlet property="next_button" destination="jWD-Cv-miy" id="l3f-Cr-BTq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAA-rb-VrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927" y="276"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo.png" width="512" height="512"/>
+    </resources>
 </document>

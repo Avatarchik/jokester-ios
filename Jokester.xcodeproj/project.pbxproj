@@ -8,6 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		6100E3321C8B3F6B009DB336 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6100E3311C8B3F6B009DB336 /* logo.png */; };
+		612AD2B91C8E1A31002DADB2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2B31C8E1A31002DADB2 /* Bolts.framework */; };
+		612AD2BA1C8E1A31002DADB2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2B41C8E1A31002DADB2 /* Parse.framework */; };
+		612AD2BB1C8E1A31002DADB2 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2B51C8E1A31002DADB2 /* ParseFacebookUtils.framework */; };
+		612AD2BC1C8E1A31002DADB2 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2B61C8E1A31002DADB2 /* ParseFacebookUtilsV4.framework */; };
+		612AD2BD1C8E1A31002DADB2 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2B71C8E1A31002DADB2 /* ParseTwitterUtils.framework */; };
+		612AD2BE1C8E1A31002DADB2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2B81C8E1A31002DADB2 /* ParseUI.framework */; };
+		612AD2C01C8E1A6A002DADB2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2BF1C8E1A6A002DADB2 /* AudioToolbox.framework */; };
+		612AD2C21C8E1A74002DADB2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2C11C8E1A74002DADB2 /* CFNetwork.framework */; };
+		612AD2C41C8E1A7D002DADB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2C31C8E1A7D002DADB2 /* CoreGraphics.framework */; };
+		612AD2C61C8E1A86002DADB2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2C51C8E1A86002DADB2 /* CoreLocation.framework */; };
+		612AD2C81C8E1A8E002DADB2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2C71C8E1A8E002DADB2 /* QuartzCore.framework */; };
+		612AD2CA1C8E1A98002DADB2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2C91C8E1A98002DADB2 /* Security.framework */; };
+		612AD2CC1C8E1AA1002DADB2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2CB1C8E1AA1002DADB2 /* StoreKit.framework */; };
+		612AD2CE1C8E1AA8002DADB2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2CD1C8E1AA8002DADB2 /* SystemConfiguration.framework */; };
+		612AD2D01C8E1AB0002DADB2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2CF1C8E1AB0002DADB2 /* libz.tbd */; };
+		612AD2D21C8E1AB7002DADB2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2D11C8E1AB7002DADB2 /* libsqlite3.tbd */; };
+		612AD2D61C8E1BA0002DADB2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2D41C8E1BA0002DADB2 /* Fabric.framework */; };
+		612AD2D71C8E1BA0002DADB2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2D51C8E1BA0002DADB2 /* Crashlytics.framework */; };
+		612AD2F01C8E1C67002DADB2 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612AD2D91C8E1C67002DADB2 /* Analytics.swift */; };
+		612AD2F11C8E1C67002DADB2 /* Cognito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612AD2DA1C8E1C67002DADB2 /* Cognito.swift */; };
+		612AD2F21C8E1C67002DADB2 /* DynamoDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612AD2DB1C8E1C67002DADB2 /* DynamoDB.swift */; };
+		612AD2F31C8E1C67002DADB2 /* AWSCloudWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2DD1C8E1C67002DADB2 /* AWSCloudWatch.framework */; };
+		612AD2F41C8E1C67002DADB2 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2DE1C8E1C67002DADB2 /* AWSCore.framework */; };
+		612AD2F51C8E1C67002DADB2 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2DF1C8E1C67002DADB2 /* AWSDynamoDB.framework */; };
+		612AD2F61C8E1C67002DADB2 /* AWSMobileAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2E01C8E1C67002DADB2 /* AWSMobileAnalytics.framework */; };
+		612AD2F71C8E1C67002DADB2 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2E11C8E1C67002DADB2 /* AWSS3.framework */; };
+		612AD2F81C8E1C67002DADB2 /* AWSSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2E21C8E1C67002DADB2 /* AWSSNS.framework */; };
+		612AD2F91C8E1C67002DADB2 /* Amazon Software License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 612AD2E41C8E1C67002DADB2 /* Amazon Software License.txt */; };
+		612AD2FA1C8E1C67002DADB2 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2E51C8E1C67002DADB2 /* AWSCognito.framework */; };
+		612AD2FB1C8E1C67002DADB2 /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = 612AD2E61C8E1C67002DADB2 /* NOTICE */; };
+		612AD2FD1C8E1C67002DADB2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 612AD2E81C8E1C67002DADB2 /* LICENSE */; };
+		612AD2FF1C8E1C67002DADB2 /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = 612AD2EA1C8E1C67002DADB2 /* NOTICE */; };
+		612AD3001C8E1C67002DADB2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 612AD2EB1C8E1C67002DADB2 /* README.md */; };
+		612AD3021C8E1C67002DADB2 /* S3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612AD2ED1C8E1C67002DADB2 /* S3.swift */; };
+		612AD3081C8E2831002DADB2 /* AgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612AD3071C8E2830002DADB2 /* AgeViewController.swift */; };
+		612AD30A1C8E307D002DADB2 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612AD3091C8E307D002DADB2 /* GenderViewController.swift */; };
+		612AD30C1C8E31C7002DADB2 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612AD30B1C8E31C7002DADB2 /* LocationViewController.swift */; };
+		612AD3101C8E4622002DADB2 /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 612AD30F1C8E4622002DADB2 /* IQDropDownTextField.m */; };
+		612AD3121C8EB7F5002DADB2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612AD3111C8EB7F5002DADB2 /* MainViewController.swift */; };
 		61F064B21C7F7E4600E798BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F064B11C7F7E4600E798BD /* AppDelegate.swift */; };
 		61F064B41C7F7E4600E798BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F064B31C7F7E4600E798BD /* ViewController.swift */; };
 		61F064B71C7F7E4600E798BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F064B51C7F7E4600E798BD /* Main.storyboard */; };
@@ -18,6 +57,47 @@
 
 /* Begin PBXFileReference section */
 		6100E3311C8B3F6B009DB336 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		612AD2B31C8E1A31002DADB2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		612AD2B41C8E1A31002DADB2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		612AD2B51C8E1A31002DADB2 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		612AD2B61C8E1A31002DADB2 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		612AD2B71C8E1A31002DADB2 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		612AD2B81C8E1A31002DADB2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		612AD2BF1C8E1A6A002DADB2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		612AD2C11C8E1A74002DADB2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		612AD2C31C8E1A7D002DADB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		612AD2C51C8E1A86002DADB2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		612AD2C71C8E1A8E002DADB2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		612AD2C91C8E1A98002DADB2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		612AD2CB1C8E1AA1002DADB2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		612AD2CD1C8E1AA8002DADB2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		612AD2CF1C8E1AB0002DADB2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		612AD2D11C8E1AB7002DADB2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		612AD2D41C8E1BA0002DADB2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		612AD2D51C8E1BA0002DADB2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		612AD2D91C8E1C67002DADB2 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		612AD2DA1C8E1C67002DADB2 /* Cognito.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cognito.swift; sourceTree = "<group>"; };
+		612AD2DB1C8E1C67002DADB2 /* DynamoDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamoDB.swift; sourceTree = "<group>"; };
+		612AD2DD1C8E1C67002DADB2 /* AWSCloudWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCloudWatch.framework; sourceTree = "<group>"; };
+		612AD2DE1C8E1C67002DADB2 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
+		612AD2DF1C8E1C67002DADB2 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
+		612AD2E01C8E1C67002DADB2 /* AWSMobileAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileAnalytics.framework; sourceTree = "<group>"; };
+		612AD2E11C8E1C67002DADB2 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
+		612AD2E21C8E1C67002DADB2 /* AWSSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSNS.framework; sourceTree = "<group>"; };
+		612AD2E41C8E1C67002DADB2 /* Amazon Software License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Amazon Software License.txt"; sourceTree = "<group>"; };
+		612AD2E51C8E1C67002DADB2 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognito.framework; sourceTree = "<group>"; };
+		612AD2E61C8E1C67002DADB2 /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
+		612AD2E81C8E1C67002DADB2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		612AD2EA1C8E1C67002DADB2 /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
+		612AD2EB1C8E1C67002DADB2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		612AD2ED1C8E1C67002DADB2 /* S3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S3.swift; sourceTree = "<group>"; };
+		612AD3061C8E1CCB002DADB2 /* jokester-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jokester-bridging-header.h"; sourceTree = "<group>"; };
+		612AD3071C8E2830002DADB2 /* AgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeViewController.swift; sourceTree = "<group>"; };
+		612AD3091C8E307D002DADB2 /* GenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		612AD30B1C8E31C7002DADB2 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		612AD30E1C8E4622002DADB2 /* IQDropDownTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQDropDownTextField.h; sourceTree = "<group>"; };
+		612AD30F1C8E4622002DADB2 /* IQDropDownTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQDropDownTextField.m; sourceTree = "<group>"; };
+		612AD3111C8EB7F5002DADB2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		61F064AE1C7F7E4600E798BD /* Jokester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F064B11C7F7E4600E798BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61F064B31C7F7E4600E798BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +113,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612AD2D21C8E1AB7002DADB2 /* libsqlite3.tbd in Frameworks */,
+				612AD2F41C8E1C67002DADB2 /* AWSCore.framework in Frameworks */,
+				612AD2D01C8E1AB0002DADB2 /* libz.tbd in Frameworks */,
+				612AD2F61C8E1C67002DADB2 /* AWSMobileAnalytics.framework in Frameworks */,
+				612AD2FA1C8E1C67002DADB2 /* AWSCognito.framework in Frameworks */,
+				612AD2CE1C8E1AA8002DADB2 /* SystemConfiguration.framework in Frameworks */,
+				612AD2F71C8E1C67002DADB2 /* AWSS3.framework in Frameworks */,
+				612AD2CC1C8E1AA1002DADB2 /* StoreKit.framework in Frameworks */,
+				612AD2CA1C8E1A98002DADB2 /* Security.framework in Frameworks */,
+				612AD2C81C8E1A8E002DADB2 /* QuartzCore.framework in Frameworks */,
+				612AD2C61C8E1A86002DADB2 /* CoreLocation.framework in Frameworks */,
+				612AD2C41C8E1A7D002DADB2 /* CoreGraphics.framework in Frameworks */,
+				612AD2C21C8E1A74002DADB2 /* CFNetwork.framework in Frameworks */,
+				612AD2C01C8E1A6A002DADB2 /* AudioToolbox.framework in Frameworks */,
+				612AD2D71C8E1BA0002DADB2 /* Crashlytics.framework in Frameworks */,
+				612AD2BE1C8E1A31002DADB2 /* ParseUI.framework in Frameworks */,
+				612AD2BA1C8E1A31002DADB2 /* Parse.framework in Frameworks */,
+				612AD2B91C8E1A31002DADB2 /* Bolts.framework in Frameworks */,
+				612AD2BC1C8E1A31002DADB2 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				612AD2BB1C8E1A31002DADB2 /* ParseFacebookUtils.framework in Frameworks */,
+				612AD2F81C8E1C67002DADB2 /* AWSSNS.framework in Frameworks */,
+				612AD2F31C8E1C67002DADB2 /* AWSCloudWatch.framework in Frameworks */,
+				612AD2D61C8E1BA0002DADB2 /* Fabric.framework in Frameworks */,
+				612AD2F51C8E1C67002DADB2 /* AWSDynamoDB.framework in Frameworks */,
+				612AD2BD1C8E1A31002DADB2 /* ParseTwitterUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +150,89 @@
 				6100E3311C8B3F6B009DB336 /* logo.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		612AD2B21C8E1A27002DADB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				612AD2D41C8E1BA0002DADB2 /* Fabric.framework */,
+				612AD2D51C8E1BA0002DADB2 /* Crashlytics.framework */,
+				612AD2D11C8E1AB7002DADB2 /* libsqlite3.tbd */,
+				612AD2CF1C8E1AB0002DADB2 /* libz.tbd */,
+				612AD2CD1C8E1AA8002DADB2 /* SystemConfiguration.framework */,
+				612AD2CB1C8E1AA1002DADB2 /* StoreKit.framework */,
+				612AD2C91C8E1A98002DADB2 /* Security.framework */,
+				612AD2C71C8E1A8E002DADB2 /* QuartzCore.framework */,
+				612AD2C51C8E1A86002DADB2 /* CoreLocation.framework */,
+				612AD2C31C8E1A7D002DADB2 /* CoreGraphics.framework */,
+				612AD2C11C8E1A74002DADB2 /* CFNetwork.framework */,
+				612AD2BF1C8E1A6A002DADB2 /* AudioToolbox.framework */,
+				612AD2B31C8E1A31002DADB2 /* Bolts.framework */,
+				612AD2B41C8E1A31002DADB2 /* Parse.framework */,
+				612AD2B51C8E1A31002DADB2 /* ParseFacebookUtils.framework */,
+				612AD2B61C8E1A31002DADB2 /* ParseFacebookUtilsV4.framework */,
+				612AD2B71C8E1A31002DADB2 /* ParseTwitterUtils.framework */,
+				612AD2B81C8E1A31002DADB2 /* ParseUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		612AD2D81C8E1C67002DADB2 /* aws */ = {
+			isa = PBXGroup;
+			children = (
+				612AD2DC1C8E1C67002DADB2 /* frameworks */,
+				612AD2D91C8E1C67002DADB2 /* Analytics.swift */,
+				612AD2DA1C8E1C67002DADB2 /* Cognito.swift */,
+				612AD2DB1C8E1C67002DADB2 /* DynamoDB.swift */,
+				612AD2ED1C8E1C67002DADB2 /* S3.swift */,
+				612AD2E81C8E1C67002DADB2 /* LICENSE */,
+				612AD2EA1C8E1C67002DADB2 /* NOTICE */,
+				612AD2EB1C8E1C67002DADB2 /* README.md */,
+			);
+			path = aws;
+			sourceTree = "<group>";
+		};
+		612AD2DC1C8E1C67002DADB2 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				612AD2DD1C8E1C67002DADB2 /* AWSCloudWatch.framework */,
+				612AD2DE1C8E1C67002DADB2 /* AWSCore.framework */,
+				612AD2DF1C8E1C67002DADB2 /* AWSDynamoDB.framework */,
+				612AD2E01C8E1C67002DADB2 /* AWSMobileAnalytics.framework */,
+				612AD2E11C8E1C67002DADB2 /* AWSS3.framework */,
+				612AD2E21C8E1C67002DADB2 /* AWSSNS.framework */,
+				612AD2E31C8E1C67002DADB2 /* extras */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		612AD2E31C8E1C67002DADB2 /* extras */ = {
+			isa = PBXGroup;
+			children = (
+				612AD2E41C8E1C67002DADB2 /* Amazon Software License.txt */,
+				612AD2E51C8E1C67002DADB2 /* AWSCognito.framework */,
+				612AD2E61C8E1C67002DADB2 /* NOTICE */,
+			);
+			path = extras;
+			sourceTree = "<group>";
+		};
+		612AD3051C8E1C7B002DADB2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				612AD30D1C8E4622002DADB2 /* IQDropDownTextField */,
+				612AD2D81C8E1C67002DADB2 /* aws */,
+				612AD3061C8E1CCB002DADB2 /* jokester-bridging-header.h */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		612AD30D1C8E4622002DADB2 /* IQDropDownTextField */ = {
+			isa = PBXGroup;
+			children = (
+				612AD30E1C8E4622002DADB2 /* IQDropDownTextField.h */,
+				612AD30F1C8E4622002DADB2 /* IQDropDownTextField.m */,
+			);
+			path = IQDropDownTextField;
 			sourceTree = "<group>";
 		};
 		61F064A51C7F7E4600E798BD = {
@@ -66,9 +254,15 @@
 		61F064B01C7F7E4600E798BD /* Jokester */ = {
 			isa = PBXGroup;
 			children = (
+				612AD3051C8E1C7B002DADB2 /* Library */,
+				612AD2B21C8E1A27002DADB2 /* Frameworks */,
 				6100E3301C8B3F5F009DB336 /* Images */,
-				61F064B11C7F7E4600E798BD /* AppDelegate.swift */,
 				61F064B31C7F7E4600E798BD /* ViewController.swift */,
+				612AD3071C8E2830002DADB2 /* AgeViewController.swift */,
+				612AD3091C8E307D002DADB2 /* GenderViewController.swift */,
+				612AD30B1C8E31C7002DADB2 /* LocationViewController.swift */,
+				612AD3111C8EB7F5002DADB2 /* MainViewController.swift */,
+				61F064B11C7F7E4600E798BD /* AppDelegate.swift */,
 				61F064B51C7F7E4600E798BD /* Main.storyboard */,
 				61F064BB1C7F7E4600E798BD /* Assets.xcassets */,
 				61F064BD1C7F7E4600E798BD /* LaunchScreen.storyboard */,
@@ -88,6 +282,7 @@
 				61F064AA1C7F7E4600E798BD /* Sources */,
 				61F064AB1C7F7E4600E798BD /* Frameworks */,
 				61F064AC1C7F7E4600E798BD /* Resources */,
+				612AD2D31C8E1B89002DADB2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -136,7 +331,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612AD2FF1C8E1C67002DADB2 /* NOTICE in Resources */,
+				612AD2F91C8E1C67002DADB2 /* Amazon Software License.txt in Resources */,
 				6100E3321C8B3F6B009DB336 /* logo.png in Resources */,
+				612AD2FB1C8E1C67002DADB2 /* NOTICE in Resources */,
+				612AD2FD1C8E1C67002DADB2 /* LICENSE in Resources */,
 				61F064BF1C7F7E4600E798BD /* LaunchScreen.storyboard in Resources */,
 				61F064BC1C7F7E4600E798BD /* Assets.xcassets in Resources */,
 				61F064B71C7F7E4600E798BD /* Main.storyboard in Resources */,
@@ -145,14 +344,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		612AD2D31C8E1B89002DADB2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run d1b59e5498cdc28f4fc129575996dfb1b1dba4ca a0174bd21aef28a45f23ce86ba7ecfcc0b2982ef573164f52e9f856da96b65af";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		61F064AA1C7F7E4600E798BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612AD3101C8E4622002DADB2 /* IQDropDownTextField.m in Sources */,
+				612AD3121C8EB7F5002DADB2 /* MainViewController.swift in Sources */,
 				61F064B41C7F7E4600E798BD /* ViewController.swift in Sources */,
+				612AD30A1C8E307D002DADB2 /* GenderViewController.swift in Sources */,
+				612AD2F21C8E1C67002DADB2 /* DynamoDB.swift in Sources */,
+				612AD3081C8E2831002DADB2 /* AgeViewController.swift in Sources */,
+				612AD3021C8E1C67002DADB2 /* S3.swift in Sources */,
+				612AD30C1C8E31C7002DADB2 /* LocationViewController.swift in Sources */,
 				61F064B21C7F7E4600E798BD /* AppDelegate.swift in Sources */,
+				612AD2F01C8E1C67002DADB2 /* Analytics.swift in Sources */,
+				612AD3001C8E1C67002DADB2 /* README.md in Sources */,
 				61F064BA1C7F7E4600E798BD /* Jokester.xcdatamodeld in Sources */,
+				612AD2F11C8E1C67002DADB2 /* Cognito.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +488,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Jokester",
+					"$(PROJECT_DIR)/Jokester/aws/frameworks",
+					"$(PROJECT_DIR)/Jokester/aws/frameworks/extras",
+				);
 				INFOPLIST_FILE = Jokester/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polarhills.Jokester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Jokester/jokester-bridging-header.h";
 			};
 			name = Debug;
 		};
@@ -275,11 +507,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Jokester",
+					"$(PROJECT_DIR)/Jokester/aws/frameworks",
+					"$(PROJECT_DIR)/Jokester/aws/frameworks/extras",
+				);
 				INFOPLIST_FILE = Jokester/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polarhills.Jokester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Jokester/jokester-bridging-header.h";
 			};
 			name = Release;
 		};

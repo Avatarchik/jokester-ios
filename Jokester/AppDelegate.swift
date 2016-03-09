@@ -8,14 +8,35 @@
 
 import UIKit
 import CoreData
+import Bolts
+import Parse
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        // Initialize Parse.
+        let parse_config = ParseClientConfiguration { (ParseMutableClientConfiguration) -> Void in
+            ParseMutableClientConfiguration.applicationId = "VzpBp1fqzUA6HwWkSKl0NO3c22syVo37lEp3Ua7J"
+            ParseMutableClientConfiguration.clientKey = "kmaSSvbcTud5sqLIVWHiup4IDScAcRjPEAeePdiJ"
+            ParseMutableClientConfiguration.server = "http://getjokester.herokuapp.com/parse"
+        }
+        Parse.initializeWithConfiguration(parse_config);
+        
+        // Initialize Fabric
+        Fabric.with([Crashlytics.self])
+        
+        // AWS Cognito
+        cognito_initialize();
+        
+        // AWS Analytics
+        analytics_initialize();
+        
         // Override point for customization after application launch.
         return true
     }

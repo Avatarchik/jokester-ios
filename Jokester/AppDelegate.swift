@@ -17,6 +17,8 @@ import Crashlytics
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var initialViewController: UIViewController?
+    var storyboard: UIStoryboard?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -36,6 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // AWS Analytics
         analytics_initialize();
+        
+        // Logged in
+        storyboard =  UIStoryboard(name: "Main", bundle: nil)
+        initialViewController  = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+        let currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            initialViewController  = self.storyboard?.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+        }
+        let frame = UIScreen.mainScreen().bounds
+        window = UIWindow(frame: frame)
+        window!.rootViewController = initialViewController
+        window!.makeKeyAndVisible()
         
         // Override point for customization after application launch.
         return true

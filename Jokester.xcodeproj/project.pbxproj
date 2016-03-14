@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6100E3321C8B3F6B009DB336 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6100E3311C8B3F6B009DB336 /* logo.png */; };
+		611B9A781C95DD7B0003E865 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A721C95DD7B0003E865 /* FBAudienceNetwork.framework */; };
+		611B9A791C95DD7B0003E865 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A731C95DD7B0003E865 /* FBSDKCoreKit.framework */; };
+		611B9A7A1C95DD7B0003E865 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A741C95DD7B0003E865 /* FBSDKLoginKit.framework */; };
+		611B9A7B1C95DD7B0003E865 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A751C95DD7B0003E865 /* FBSDKMessengerShareKit.framework */; };
+		611B9A7C1C95DD7B0003E865 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A761C95DD7B0003E865 /* FBSDKShareKit.framework */; };
+		611B9A7E1C95DED80003E865 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A7D1C95DED80003E865 /* AdSupport.framework */; };
+		611B9A801C95DEEB0003E865 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A7F1C95DEEA0003E865 /* CoreMotion.framework */; };
+		611B9A9A1C95F3840003E865 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 611B9A991C95F3840003E865 /* background.jpg */; };
+		611B9A9C1C962E210003E865 /* balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 611B9A9B1C962E210003E865 /* balloon.png */; };
 		612AD2B91C8E1A31002DADB2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2B31C8E1A31002DADB2 /* Bolts.framework */; };
 		612AD2BA1C8E1A31002DADB2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2B41C8E1A31002DADB2 /* Parse.framework */; };
 		612AD2BB1C8E1A31002DADB2 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2B51C8E1A31002DADB2 /* ParseFacebookUtils.framework */; };
@@ -47,6 +56,13 @@
 		612AD30C1C8E31C7002DADB2 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612AD30B1C8E31C7002DADB2 /* LocationViewController.swift */; };
 		612AD3101C8E4622002DADB2 /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 612AD30F1C8E4622002DADB2 /* IQDropDownTextField.m */; };
 		612AD3121C8EB7F5002DADB2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612AD3111C8EB7F5002DADB2 /* MainViewController.swift */; };
+		614DB31B1C91E10A0007900E /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614DB3181C91E10A0007900E /* DraggableView.swift */; };
+		614DB31C1C91E10A0007900E /* DraggableViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614DB3191C91E10A0007900E /* DraggableViewBackground.swift */; };
+		614DB31D1C91E10A0007900E /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614DB31A1C91E10A0007900E /* OverlayView.swift */; };
+		614DB3211C91E49D0007900E /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614DB3201C91E49D0007900E /* WriteViewController.swift */; };
+		614DB3231C91E4A80007900E /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614DB3221C91E4A80007900E /* PointsViewController.swift */; };
+		615C220B1C94D1F00046907C /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615C220A1C94D1F00046907C /* GoogleMobileAds.framework */; };
+		61E9992A1C937AD80059B80D /* UICommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E999291C937AD80059B80D /* UICommon.swift */; };
 		61F064B21C7F7E4600E798BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F064B11C7F7E4600E798BD /* AppDelegate.swift */; };
 		61F064B41C7F7E4600E798BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F064B31C7F7E4600E798BD /* ViewController.swift */; };
 		61F064B71C7F7E4600E798BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F064B51C7F7E4600E798BD /* Main.storyboard */; };
@@ -57,6 +73,15 @@
 
 /* Begin PBXFileReference section */
 		6100E3311C8B3F6B009DB336 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		611B9A721C95DD7B0003E865 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		611B9A731C95DD7B0003E865 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		611B9A741C95DD7B0003E865 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		611B9A751C95DD7B0003E865 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		611B9A761C95DD7B0003E865 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		611B9A7D1C95DED80003E865 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		611B9A7F1C95DEEA0003E865 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		611B9A991C95F3840003E865 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		611B9A9B1C962E210003E865 /* balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon.png; sourceTree = "<group>"; };
 		612AD2B31C8E1A31002DADB2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		612AD2B41C8E1A31002DADB2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		612AD2B51C8E1A31002DADB2 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -98,6 +123,13 @@
 		612AD30E1C8E4622002DADB2 /* IQDropDownTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQDropDownTextField.h; sourceTree = "<group>"; };
 		612AD30F1C8E4622002DADB2 /* IQDropDownTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQDropDownTextField.m; sourceTree = "<group>"; };
 		612AD3111C8EB7F5002DADB2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		614DB3181C91E10A0007900E /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
+		614DB3191C91E10A0007900E /* DraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewBackground.swift; sourceTree = "<group>"; };
+		614DB31A1C91E10A0007900E /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		614DB3201C91E49D0007900E /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		614DB3221C91E4A80007900E /* PointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
+		615C220A1C94D1F00046907C /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		61E999291C937AD80059B80D /* UICommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICommon.swift; sourceTree = "<group>"; };
 		61F064AE1C7F7E4600E798BD /* Jokester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F064B11C7F7E4600E798BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61F064B31C7F7E4600E798BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,18 +145,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611B9A801C95DEEB0003E865 /* CoreMotion.framework in Frameworks */,
+				612AD2CC1C8E1AA1002DADB2 /* StoreKit.framework in Frameworks */,
+				611B9A7E1C95DED80003E865 /* AdSupport.framework in Frameworks */,
 				612AD2D21C8E1AB7002DADB2 /* libsqlite3.tbd in Frameworks */,
 				612AD2F41C8E1C67002DADB2 /* AWSCore.framework in Frameworks */,
+				615C220B1C94D1F00046907C /* GoogleMobileAds.framework in Frameworks */,
 				612AD2D01C8E1AB0002DADB2 /* libz.tbd in Frameworks */,
 				612AD2F61C8E1C67002DADB2 /* AWSMobileAnalytics.framework in Frameworks */,
 				612AD2FA1C8E1C67002DADB2 /* AWSCognito.framework in Frameworks */,
 				612AD2CE1C8E1AA8002DADB2 /* SystemConfiguration.framework in Frameworks */,
 				612AD2F71C8E1C67002DADB2 /* AWSS3.framework in Frameworks */,
-				612AD2CC1C8E1AA1002DADB2 /* StoreKit.framework in Frameworks */,
+				611B9A7C1C95DD7B0003E865 /* FBSDKShareKit.framework in Frameworks */,
 				612AD2CA1C8E1A98002DADB2 /* Security.framework in Frameworks */,
 				612AD2C81C8E1A8E002DADB2 /* QuartzCore.framework in Frameworks */,
 				612AD2C61C8E1A86002DADB2 /* CoreLocation.framework in Frameworks */,
 				612AD2C41C8E1A7D002DADB2 /* CoreGraphics.framework in Frameworks */,
+				611B9A7A1C95DD7B0003E865 /* FBSDKLoginKit.framework in Frameworks */,
 				612AD2C21C8E1A74002DADB2 /* CFNetwork.framework in Frameworks */,
 				612AD2C01C8E1A6A002DADB2 /* AudioToolbox.framework in Frameworks */,
 				612AD2D71C8E1BA0002DADB2 /* Crashlytics.framework in Frameworks */,
@@ -133,9 +170,12 @@
 				612AD2B91C8E1A31002DADB2 /* Bolts.framework in Frameworks */,
 				612AD2BC1C8E1A31002DADB2 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				612AD2BB1C8E1A31002DADB2 /* ParseFacebookUtils.framework in Frameworks */,
+				611B9A7B1C95DD7B0003E865 /* FBSDKMessengerShareKit.framework in Frameworks */,
 				612AD2F81C8E1C67002DADB2 /* AWSSNS.framework in Frameworks */,
 				612AD2F31C8E1C67002DADB2 /* AWSCloudWatch.framework in Frameworks */,
 				612AD2D61C8E1BA0002DADB2 /* Fabric.framework in Frameworks */,
+				611B9A781C95DD7B0003E865 /* FBAudienceNetwork.framework in Frameworks */,
+				611B9A791C95DD7B0003E865 /* FBSDKCoreKit.framework in Frameworks */,
 				612AD2F51C8E1C67002DADB2 /* AWSDynamoDB.framework in Frameworks */,
 				612AD2BD1C8E1A31002DADB2 /* ParseTwitterUtils.framework in Frameworks */,
 			);
@@ -147,6 +187,8 @@
 		6100E3301C8B3F5F009DB336 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				611B9A9B1C962E210003E865 /* balloon.png */,
+				611B9A991C95F3840003E865 /* background.jpg */,
 				6100E3311C8B3F6B009DB336 /* logo.png */,
 			);
 			name = Images;
@@ -155,10 +197,18 @@
 		612AD2B21C8E1A27002DADB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				612AD2D41C8E1BA0002DADB2 /* Fabric.framework */,
-				612AD2D51C8E1BA0002DADB2 /* Crashlytics.framework */,
+				611B9A7F1C95DEEA0003E865 /* CoreMotion.framework */,
+				611B9A7D1C95DED80003E865 /* AdSupport.framework */,
 				612AD2D11C8E1AB7002DADB2 /* libsqlite3.tbd */,
 				612AD2CF1C8E1AB0002DADB2 /* libz.tbd */,
+				612AD2D41C8E1BA0002DADB2 /* Fabric.framework */,
+				615C220A1C94D1F00046907C /* GoogleMobileAds.framework */,
+				612AD2D51C8E1BA0002DADB2 /* Crashlytics.framework */,
+				611B9A721C95DD7B0003E865 /* FBAudienceNetwork.framework */,
+				611B9A731C95DD7B0003E865 /* FBSDKCoreKit.framework */,
+				611B9A741C95DD7B0003E865 /* FBSDKLoginKit.framework */,
+				611B9A751C95DD7B0003E865 /* FBSDKMessengerShareKit.framework */,
+				611B9A761C95DD7B0003E865 /* FBSDKShareKit.framework */,
 				612AD2CD1C8E1AA8002DADB2 /* SystemConfiguration.framework */,
 				612AD2CB1C8E1AA1002DADB2 /* StoreKit.framework */,
 				612AD2C91C8E1A98002DADB2 /* Security.framework */,
@@ -177,7 +227,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		612AD2D81C8E1C67002DADB2 /* aws */ = {
+		612AD2D81C8E1C67002DADB2 /* AWS */ = {
 			isa = PBXGroup;
 			children = (
 				612AD2DC1C8E1C67002DADB2 /* frameworks */,
@@ -189,6 +239,7 @@
 				612AD2EA1C8E1C67002DADB2 /* NOTICE */,
 				612AD2EB1C8E1C67002DADB2 /* README.md */,
 			);
+			name = AWS;
 			path = aws;
 			sourceTree = "<group>";
 		};
@@ -219,9 +270,11 @@
 		612AD3051C8E1C7B002DADB2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				612AD2D81C8E1C67002DADB2 /* AWS */,
+				614DB3171C91E0FE0007900E /* Cards */,
 				612AD30D1C8E4622002DADB2 /* IQDropDownTextField */,
-				612AD2D81C8E1C67002DADB2 /* aws */,
 				612AD3061C8E1CCB002DADB2 /* jokester-bridging-header.h */,
+				61E999291C937AD80059B80D /* UICommon.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -233,6 +286,48 @@
 				612AD30F1C8E4622002DADB2 /* IQDropDownTextField.m */,
 			);
 			path = IQDropDownTextField;
+			sourceTree = "<group>";
+		};
+		613678031C94960900B48FFE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				61F064B31C7F7E4600E798BD /* ViewController.swift */,
+				612AD3071C8E2830002DADB2 /* AgeViewController.swift */,
+				612AD3091C8E307D002DADB2 /* GenderViewController.swift */,
+				612AD30B1C8E31C7002DADB2 /* LocationViewController.swift */,
+				614DB3221C91E4A80007900E /* PointsViewController.swift */,
+				612AD3111C8EB7F5002DADB2 /* MainViewController.swift */,
+				614DB3201C91E49D0007900E /* WriteViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		614DB3171C91E0FE0007900E /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				614DB3181C91E10A0007900E /* DraggableView.swift */,
+				614DB3191C91E10A0007900E /* DraggableViewBackground.swift */,
+				614DB31A1C91E10A0007900E /* OverlayView.swift */,
+			);
+			name = Cards;
+			sourceTree = "<group>";
+		};
+		614DB31E1C91E1A90007900E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				61F064B51C7F7E4600E798BD /* Main.storyboard */,
+				61F064BD1C7F7E4600E798BD /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		614DB31F1C91E1D10007900E /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				61F064C01C7F7E4600E798BD /* Info.plist */,
+				61F064B81C7F7E4600E798BD /* Jokester.xcdatamodeld */,
+			);
+			name = Configurations;
 			sourceTree = "<group>";
 		};
 		61F064A51C7F7E4600E798BD = {
@@ -254,20 +349,14 @@
 		61F064B01C7F7E4600E798BD /* Jokester */ = {
 			isa = PBXGroup;
 			children = (
+				614DB31F1C91E1D10007900E /* Configurations */,
+				614DB31E1C91E1A90007900E /* Storyboards */,
 				612AD3051C8E1C7B002DADB2 /* Library */,
 				612AD2B21C8E1A27002DADB2 /* Frameworks */,
 				6100E3301C8B3F5F009DB336 /* Images */,
-				61F064B31C7F7E4600E798BD /* ViewController.swift */,
-				612AD3071C8E2830002DADB2 /* AgeViewController.swift */,
-				612AD3091C8E307D002DADB2 /* GenderViewController.swift */,
-				612AD30B1C8E31C7002DADB2 /* LocationViewController.swift */,
-				612AD3111C8EB7F5002DADB2 /* MainViewController.swift */,
-				61F064B11C7F7E4600E798BD /* AppDelegate.swift */,
-				61F064B51C7F7E4600E798BD /* Main.storyboard */,
+				613678031C94960900B48FFE /* ViewControllers */,
 				61F064BB1C7F7E4600E798BD /* Assets.xcassets */,
-				61F064BD1C7F7E4600E798BD /* LaunchScreen.storyboard */,
-				61F064C01C7F7E4600E798BD /* Info.plist */,
-				61F064B81C7F7E4600E798BD /* Jokester.xcdatamodeld */,
+				61F064B11C7F7E4600E798BD /* AppDelegate.swift */,
 			);
 			path = Jokester;
 			sourceTree = "<group>";
@@ -332,8 +421,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				612AD2FF1C8E1C67002DADB2 /* NOTICE in Resources */,
+				611B9A9A1C95F3840003E865 /* background.jpg in Resources */,
 				612AD2F91C8E1C67002DADB2 /* Amazon Software License.txt in Resources */,
 				6100E3321C8B3F6B009DB336 /* logo.png in Resources */,
+				611B9A9C1C962E210003E865 /* balloon.png in Resources */,
 				612AD2FB1C8E1C67002DADB2 /* NOTICE in Resources */,
 				612AD2FD1C8E1C67002DADB2 /* LICENSE in Resources */,
 				61F064BF1C7F7E4600E798BD /* LaunchScreen.storyboard in Resources */,
@@ -365,14 +456,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				614DB31B1C91E10A0007900E /* DraggableView.swift in Sources */,
+				614DB3211C91E49D0007900E /* WriteViewController.swift in Sources */,
 				612AD3101C8E4622002DADB2 /* IQDropDownTextField.m in Sources */,
 				612AD3121C8EB7F5002DADB2 /* MainViewController.swift in Sources */,
 				61F064B41C7F7E4600E798BD /* ViewController.swift in Sources */,
 				612AD30A1C8E307D002DADB2 /* GenderViewController.swift in Sources */,
 				612AD2F21C8E1C67002DADB2 /* DynamoDB.swift in Sources */,
+				614DB3231C91E4A80007900E /* PointsViewController.swift in Sources */,
 				612AD3081C8E2831002DADB2 /* AgeViewController.swift in Sources */,
+				61E9992A1C937AD80059B80D /* UICommon.swift in Sources */,
 				612AD3021C8E1C67002DADB2 /* S3.swift in Sources */,
 				612AD30C1C8E31C7002DADB2 /* LocationViewController.swift in Sources */,
+				614DB31D1C91E10A0007900E /* OverlayView.swift in Sources */,
+				614DB31C1C91E10A0007900E /* DraggableViewBackground.swift in Sources */,
 				61F064B21C7F7E4600E798BD /* AppDelegate.swift in Sources */,
 				612AD2F01C8E1C67002DADB2 /* Analytics.swift in Sources */,
 				612AD3001C8E1C67002DADB2 /* README.md in Sources */,
@@ -488,6 +585,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Jokester",

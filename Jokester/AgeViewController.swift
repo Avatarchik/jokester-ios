@@ -40,9 +40,12 @@ class AgeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         }
         else {
             
+            let components: NSDateComponents = NSCalendar.currentCalendar().components(.Year, fromDate: NSDate())
+            let birthyear = components.year - Int(self.age)!
+            
             // Save
             let currentUser = PFUser.currentUser();
-            currentUser!["birthyear"] = self.age;
+            currentUser!["birthyear"] = String(birthyear);
             currentUser?.saveEventually();
             
             // Next

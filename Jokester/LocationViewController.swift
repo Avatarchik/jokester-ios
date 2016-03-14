@@ -25,6 +25,13 @@ class LocationViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     
     @IBOutlet weak var next_button: UIButton!
     @IBAction func next_button(sender: AnyObject) {
+        
+        // Save
+        let currentUser = PFUser.currentUser();
+        currentUser!["location"] = self.location;
+        currentUser!["geopoint"] = self.geopoint;
+        currentUser?.saveEventually();
+        
         if(self.location.characters.count <= 0) {
             let alertController = UIAlertController(title: "You're Invisible", message:
                 "We couldn't find your location at the moment but don't worry about it.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -36,13 +43,6 @@ class LocationViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
             
         }
         else {
-            
-            // Save
-            let currentUser = PFUser.currentUser();
-            currentUser!["location"] = self.location;
-            currentUser!["geopoint"] = self.geopoint;
-            currentUser?.saveEventually();
-            
             // Next
             let vc = self.storyboard?.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
             self.presentViewController(vc, animated: false, completion: nil)

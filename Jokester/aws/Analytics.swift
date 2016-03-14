@@ -26,6 +26,11 @@ func analytics_record_event(action: String, interface: String, custom: [String:S
         let customEvent = eventClient!.createEventWithEventType(action);
         customEvent.addAttribute(interface, forKey: "Interface");
         
+        // ID
+        if(currentUser!.objectId != nil) {
+            customEvent.addAttribute(currentUser!.objectId, forKey: "objectId");
+        }
+        
         // Birthyear
         let birthyear = currentUser!["birthyear"] as? String;
         if(birthyear != nil) {

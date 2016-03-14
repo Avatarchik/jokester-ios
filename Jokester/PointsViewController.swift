@@ -27,14 +27,14 @@ class PointsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Design
-        imageview.image = UIImage(named: "balloon.png")
-        imageview.contentMode = .ScaleAspectFit
-        
         // Status bar
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.mainScreen().bounds.size.width, height: 20.0))
         view.backgroundColor = UIColor(red:0.25, green:0.62, blue:1.0, alpha:1.0)
         self.view.addSubview(view)
+        
+        // Design
+        imageview.image = UIImage(named: "balloon.png")
+        imageview.contentMode = .ScaleAspectFit
     }
     
     override func didReceiveMemoryWarning() {

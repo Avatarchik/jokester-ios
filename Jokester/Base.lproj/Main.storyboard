@@ -191,17 +191,22 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="kfg-3J-miu"/>
                                     <constraint firstAttribute="width" constant="320" id="vbi-t2-HFj"/>
                                     <constraint firstAttribute="height" constant="440" id="zry-lt-lkc"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="vbi-t2-HFj"/>
                                         <exclude reference="zry-lt-lkc"/>
                                     </mask>
                                 </variation>
                             </view>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KF-ld-oug">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tNs-aF-4EN"/>
+                                </constraints>
                                 <color key="barTintColor" red="0.2470588235" green="0.61960784310000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -249,9 +254,12 @@
                             <constraint firstItem="us0-fI-LUr" firstAttribute="leading" secondItem="yhw-02-dFv" secondAttribute="leadingMargin" constant="-20" id="XbW-lF-jvq"/>
                             <constraint firstItem="z4q-Py-Phs" firstAttribute="leading" secondItem="yhw-02-dFv" secondAttribute="leadingMargin" id="cyl-RM-3vc"/>
                             <constraint firstItem="ZZZ-SW-XGZ" firstAttribute="top" secondItem="z4q-Py-Phs" secondAttribute="bottom" id="ewO-vw-dAw"/>
+                            <constraint firstItem="us0-fI-LUr" firstAttribute="centerY" secondItem="yhw-02-dFv" secondAttribute="centerY" id="gn6-u6-yiw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1KF-ld-oug" secondAttribute="trailing" constant="-20" id="rcW-V3-6Zf"/>
                             <constraint firstItem="us0-fI-LUr" firstAttribute="top" secondItem="1KF-ld-oug" secondAttribute="bottom" id="riw-4I-LjZ"/>
+                            <constraint firstItem="us0-fI-LUr" firstAttribute="leading" secondItem="yhw-02-dFv" secondAttribute="leadingMargin" constant="-20" id="rxw-sy-i0i"/>
                             <constraint firstItem="ZZZ-SW-XGZ" firstAttribute="top" secondItem="us0-fI-LUr" secondAttribute="bottom" id="xTS-Hw-LxA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="us0-fI-LUr" secondAttribute="trailing" constant="-20" id="xcj-rD-abD"/>
                             <constraint firstItem="1KF-ld-oug" firstAttribute="leading" secondItem="yhw-02-dFv" secondAttribute="leadingMargin" constant="-20" id="yRr-2J-AUJ"/>
                         </constraints>
                         <variation key="default">
@@ -259,7 +267,10 @@
                                 <exclude reference="2Cj-ZV-gaQ"/>
                                 <exclude reference="WPf-HG-nNS"/>
                                 <exclude reference="XbW-lF-jvq"/>
+                                <exclude reference="gn6-u6-yiw"/>
                                 <exclude reference="riw-4I-LjZ"/>
+                                <exclude reference="rxw-sy-i0i"/>
+                                <exclude reference="xcj-rD-abD"/>
                                 <exclude reference="Trn-jp-2ai"/>
                             </mask>
                         </variation>
@@ -316,8 +327,23 @@
                                     <action selector="location_button:" destination="bKs-Rd-hie" eventType="touchUpInside" id="c7c-Zb-TAC"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iPE-NF-8w2">
+                                <rect key="frame" x="0.0" y="64" width="320" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="yTU-hB-Wzv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bKs-Rd-hie" id="vlz-7F-kpV"/>
+                                </connections>
+                            </textView>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uos-yE-8ul">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kfF-jX-6ej"/>
+                                </constraints>
                                 <color key="barTintColor" red="0.2470588235" green="0.61960784310000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -342,18 +368,6 @@
                                     <outlet property="delegate" destination="bKs-Rd-hie" id="7f7-YM-oz8"/>
                                 </connections>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iPE-NF-8w2">
-                                <rect key="frame" x="0.0" y="64" width="320" height="280"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="yTU-hB-Wzv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
-                                <connections>
-                                    <outlet property="delegate" destination="bKs-Rd-hie" id="vlz-7F-kpV"/>
-                                </connections>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -403,30 +417,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGD-ed-Sm6">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="barTintColor" red="0.2470588235" green="0.61960784310000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Points" id="KbJ-gV-SfT">
-                                        <barButtonItem key="leftBarButtonItem" image="Back" id="0hg-KD-bAy">
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <action selector="back_button:" destination="71y-V3-3pC" id="ShC-xv-Amw"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="DiQ-MK-nhQ">
-                                            <inset key="imageInsets" minX="5" minY="0.0" maxX="-5" maxY="0.0"/>
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="71y-V3-3pC" id="x3m-2k-TYP"/>
-                                </connections>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total Points:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLi-Wz-x0U">
                                 <rect key="frame" x="15" y="83" width="115" height="50"/>
                                 <constraints>
@@ -496,6 +486,33 @@
                                 <color key="textColor" red="0.2470588235" green="0.61960784310000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGD-ed-Sm6">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DzY-YS-K12"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.2470588235" green="0.61960784310000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Points" id="KbJ-gV-SfT">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="0hg-KD-bAy">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="back_button:" destination="71y-V3-3pC" id="ShC-xv-Amw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="DiQ-MK-nhQ">
+                                            <inset key="imageInsets" minX="5" minY="0.0" maxX="-5" maxY="0.0"/>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="71y-V3-3pC" id="x3m-2k-TYP"/>
+                                </connections>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -528,6 +545,7 @@
                             <constraint firstItem="JEQ-Fe-jOs" firstAttribute="leading" secondItem="ZLi-Wz-x0U" secondAttribute="trailing" constant="10" id="gMQ-Mq-nZs"/>
                             <constraint firstItem="9r7-df-DcE" firstAttribute="leading" secondItem="fqo-W0-k0g" secondAttribute="trailing" constant="10" id="hLM-aX-0mv"/>
                             <constraint firstItem="9r7-df-DcE" firstAttribute="leading" secondItem="fqo-W0-k0g" secondAttribute="trailing" constant="10" id="hTU-ad-z0H"/>
+                            <constraint firstItem="DGD-ed-Sm6" firstAttribute="top" secondItem="gLS-jb-gEH" secondAttribute="bottom" id="hxP-iy-Def"/>
                             <constraint firstItem="ZLi-Wz-x0U" firstAttribute="top" secondItem="DGD-ed-Sm6" secondAttribute="bottom" constant="10" id="jEp-xY-IVr"/>
                             <constraint firstItem="JEQ-Fe-jOs" firstAttribute="trailing" secondItem="col-Mc-8d4" secondAttribute="trailingMargin" id="lTd-c2-flF"/>
                             <constraint firstItem="9r7-df-DcE" firstAttribute="trailing" secondItem="col-Mc-8d4" secondAttribute="trailingMargin" constant="10" id="muZ-CP-RsJ"/>
@@ -540,6 +558,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="58z-86-i9H"/>
                                 <exclude reference="A2v-p8-1No"/>
                                 <exclude reference="mwu-Dp-YnJ"/>
                                 <exclude reference="1gS-dY-01u"/>

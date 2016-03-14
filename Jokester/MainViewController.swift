@@ -14,19 +14,28 @@ class MainViewController: UIViewController, FBInterstitialAdDelegate {
     
     var interstitialAd: FBInterstitialAd?
     var draggableBackground: DraggableViewBackground!;
+    var reload = true;
     
     @IBAction func report_button(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName("report_joke", object: nil);
     }
     
+    func reload_data() {
+        if(self.reload == false) {
+            self.draggableBackground.setupData(self.view);
+            self.reload = true;
+        }
+    }
+    
     func load_ad() {
         self.interstitialAd = FBInterstitialAd(placementID: "1064117836978248_1064119360311429")
         self.interstitialAd!.delegate = self
-        self.interstitialAd!.loadAd();
+        self.interstitialAd!.loadAd()
     }
     
     func interstitialAdDidLoad(interstitialAd: FBInterstitialAd) {
         interstitialAd.showAdFromRootViewController(self)
+        self.reload = false
     }
     
     func interstitialAd(interstitialAd: FBInterstitialAd, didFailWithError error: NSError) {
@@ -43,12 +52,14 @@ class MainViewController: UIViewController, FBInterstitialAdDelegate {
     @IBAction func pie_button(sender: AnyObject) {
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("PointsViewController") as! PointsViewController
         self.presentViewController(vc, animated: false, completion: nil)
+        self.reload = false
     }
     
     @IBOutlet weak var write_button: UIBarButtonItem!
     @IBAction func write_button(sender: AnyObject) {
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("WriteViewController") as! WriteViewController
         self.presentViewController(vc, animated: false, completion: nil)
+        self.reload = false
     }
     
     override func viewDidLoad() {
@@ -57,6 +68,7 @@ class MainViewController: UIViewController, FBInterstitialAdDelegate {
         
         // Notifications
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "load_ad", name: "load_ad", object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reload_data", name: "reload_data", object: nil);
         
         // Status bar
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.mainScreen().bounds.size.width, height: 20.0))
@@ -97,7 +109,10 @@ class MainViewController: UIViewController, FBInterstitialAdDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.draggableBackground.setupData(self.view);
+        if(self.reload == true) {
+            self.reload = false;
+            self.draggableBackground.setupData(self.view);
+        }
     }
     
     override func didReceiveMemoryWarning() {

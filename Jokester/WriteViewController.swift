@@ -12,6 +12,7 @@ import MapKit
 
 class WriteViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITextViewDelegate {
     
+    var location_updating = false;
     var location = "";
     let locationManager = CLLocationManager();
     var geopoint = PFGeoPoint(latitude:0, longitude:0);
@@ -23,6 +24,8 @@ class WriteViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         locationManager.desiredAccuracy - kCLLocationAccuracyBest;
         locationManager.requestWhenInUseAuthorization();
         locationManager.startUpdatingLocation();
+        self.location_updating = true;
+        analytics_record_event("location", interface: "WriteViewController");
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -64,6 +67,11 @@ class WriteViewController: UIViewController, MKMapViewDelegate, CLLocationManage
                 joke["age"] = age
             }
             
+            // Stop location
+            if(self.location_updating == true) {
+                locationManager.stopUpdatingLocation();
+            }
+            
             // Save
             joke.saveInBackgroundWithBlock {
                 (success: Bool, error: NSError?) -> Void in
@@ -80,6 +88,7 @@ class WriteViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     @IBOutlet weak var post_button: UIBarButtonItem!
     @IBAction func post_button(sender: AnyObject) {
         post();
+        analytics_record_event("post", interface: "WriteViewController");
     }
 
     override func viewDidLoad() {
@@ -96,6 +105,7 @@ class WriteViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         self.textarea.becomeFirstResponder();
         self.textarea.autocorrectionType = .Yes
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        analytics_record_event("viewDidLoad", interface: "WriteViewController");
     }
     
     override func didReceiveMemoryWarning() {

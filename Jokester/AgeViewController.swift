@@ -19,7 +19,7 @@ class AgeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     @IBOutlet weak var age_button: UIButton!
     @IBAction func age_button(sender: AnyObject) {
         if(self.age_picker.hidden == true) {
-            self.age = "13";
+            self.age = "18";
             self.age_button.setTitle(self.age, forState: UIControlState.Normal)
             self.age_picker.hidden = false;
         }
@@ -77,7 +77,7 @@ class AgeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         age_button.layer.borderColor = UIColor.whiteColor().CGColor
         
         // Setup
-        for (var i = 13; i < 150; i++) {
+        for (var i = 18; i < 150; i++) {
             agePickerDataSource.append(String(i))
             agePickerDataValue.append(String(i))
         }

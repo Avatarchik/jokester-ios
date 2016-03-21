@@ -35,6 +35,7 @@ class PointsViewController: UIViewController {
         // Design
         imageview.image = UIImage(named: "balloon.png")
         imageview.contentMode = .ScaleAspectFit
+        analytics_record_event("viewDidLoad", interface: "PointsViewController");
     }
     
     override func didReceiveMemoryWarning() {

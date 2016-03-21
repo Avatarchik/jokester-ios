@@ -69,6 +69,7 @@ class MainViewController: UIViewController, FBInterstitialAdDelegate {
         // Notifications
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "load_ad", name: "load_ad", object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reload_data", name: "reload_data", object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "share_screen", name: "share_screen", object: nil);
         
         // Status bar
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.mainScreen().bounds.size.width, height: 20.0))
@@ -76,9 +77,12 @@ class MainViewController: UIViewController, FBInterstitialAdDelegate {
         self.view.addSubview(view)
         
         // Cards
-        self.main_view.backgroundColor = UIColor.clearColor();
-        self.draggableBackground = DraggableViewBackground(frame: self.main_view.frame)
-        self.main_view.addSubview(draggableBackground)
+        self.draggableBackground = DraggableViewBackground(frame: self.view.frame)
+        self.view.insertSubview(draggableBackground, atIndex: 0)
+        self.draggableBackground.center = self.view.center
+        
+        // Analytics
+        analytics_record_event("viewDidLoad", interface: "MainViewController");
         
         // Jokes File
         /*
@@ -118,6 +122,20 @@ class MainViewController: UIViewController, FBInterstitialAdDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func share_screen() {
+        let layer = UIApplication.sharedApplication().keyWindow!.layer
+        let scale = UIScreen.mainScreen().scale
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
+        layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let screenshot = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
+        let shareItems:Array = [screenshot]
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [UIActivityTypePostToFacebook, UIActivityTypePostToTwitter, UIActivityTypeMessage, UIActivityTypeMail, UIActivityTypeCopyToPasteboard, UIActivityTypePrint]
+        self.presentViewController(activityViewController, animated: true, completion: nil)
     }
 
 }

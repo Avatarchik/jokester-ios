@@ -43,13 +43,13 @@ class DraggableView: UIView {
 
         joke = UILabel(frame: CGRectMake(20, 0, self.frame.size.width - 40, self.frame.size.width - 20))
         joke.text = ""
-        joke.textAlignment = NSTextAlignment.Justified
+        joke.textAlignment = NSTextAlignment.Center
         joke.textColor = UIColor.blackColor()
         joke.numberOfLines = 10
         joke.font = UIFont(name: "ChalkboardSE-Light", size: 18)
         location = UILabel(frame: CGRectMake(20, self.frame.size.width - 40, self.frame.size.width - 40, 20))
         location.text = ""
-        location.textAlignment = NSTextAlignment.Right
+        location.textAlignment = NSTextAlignment.Center
         location.textColor = UIColor.darkGrayColor()
         location.numberOfLines = 1
         location.font = UIFont(name: "ChalkboardSE-Light", size: 12)
@@ -139,6 +139,7 @@ class DraggableView: UIView {
     }
     
     func rightAction() -> Void {
+        
         let finishPoint: CGPoint = CGPointMake(500, 2 * CGFloat(yFromCenter) + self.originPoint.y)
         UIView.animateWithDuration(0.3,
             animations: {

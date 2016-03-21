@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6100E3321C8B3F6B009DB336 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6100E3311C8B3F6B009DB336 /* logo.png */; };
+		61080F821C97861C00043161 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61080F811C97861C00043161 /* StoreKit.framework */; };
 		611B9A781C95DD7B0003E865 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A721C95DD7B0003E865 /* FBAudienceNetwork.framework */; };
 		611B9A791C95DD7B0003E865 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A731C95DD7B0003E865 /* FBSDKCoreKit.framework */; };
 		611B9A7A1C95DD7B0003E865 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A741C95DD7B0003E865 /* FBSDKLoginKit.framework */; };
@@ -29,7 +30,6 @@
 		612AD2C61C8E1A86002DADB2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2C51C8E1A86002DADB2 /* CoreLocation.framework */; };
 		612AD2C81C8E1A8E002DADB2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2C71C8E1A8E002DADB2 /* QuartzCore.framework */; };
 		612AD2CA1C8E1A98002DADB2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2C91C8E1A98002DADB2 /* Security.framework */; };
-		612AD2CC1C8E1AA1002DADB2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2CB1C8E1AA1002DADB2 /* StoreKit.framework */; };
 		612AD2CE1C8E1AA8002DADB2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2CD1C8E1AA8002DADB2 /* SystemConfiguration.framework */; };
 		612AD2D01C8E1AB0002DADB2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2CF1C8E1AB0002DADB2 /* libz.tbd */; };
 		612AD2D21C8E1AB7002DADB2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 612AD2D11C8E1AB7002DADB2 /* libsqlite3.tbd */; };
@@ -73,6 +73,8 @@
 
 /* Begin PBXFileReference section */
 		6100E3311C8B3F6B009DB336 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		61080F801C9785A000043161 /* Jokester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Jokester.entitlements; sourceTree = "<group>"; };
+		61080F811C97861C00043161 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		611B9A721C95DD7B0003E865 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		611B9A731C95DD7B0003E865 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		611B9A741C95DD7B0003E865 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -94,7 +96,6 @@
 		612AD2C51C8E1A86002DADB2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		612AD2C71C8E1A8E002DADB2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		612AD2C91C8E1A98002DADB2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		612AD2CB1C8E1AA1002DADB2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		612AD2CD1C8E1AA8002DADB2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		612AD2CF1C8E1AB0002DADB2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		612AD2D11C8E1AB7002DADB2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -146,7 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				611B9A801C95DEEB0003E865 /* CoreMotion.framework in Frameworks */,
-				612AD2CC1C8E1AA1002DADB2 /* StoreKit.framework in Frameworks */,
 				611B9A7E1C95DED80003E865 /* AdSupport.framework in Frameworks */,
 				612AD2D21C8E1AB7002DADB2 /* libsqlite3.tbd in Frameworks */,
 				612AD2F41C8E1C67002DADB2 /* AWSCore.framework in Frameworks */,
@@ -167,6 +167,7 @@
 				612AD2D71C8E1BA0002DADB2 /* Crashlytics.framework in Frameworks */,
 				612AD2BE1C8E1A31002DADB2 /* ParseUI.framework in Frameworks */,
 				612AD2BA1C8E1A31002DADB2 /* Parse.framework in Frameworks */,
+				61080F821C97861C00043161 /* StoreKit.framework in Frameworks */,
 				612AD2B91C8E1A31002DADB2 /* Bolts.framework in Frameworks */,
 				612AD2BC1C8E1A31002DADB2 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				612AD2BB1C8E1A31002DADB2 /* ParseFacebookUtils.framework in Frameworks */,
@@ -197,6 +198,7 @@
 		612AD2B21C8E1A27002DADB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61080F811C97861C00043161 /* StoreKit.framework */,
 				611B9A7F1C95DEEA0003E865 /* CoreMotion.framework */,
 				611B9A7D1C95DED80003E865 /* AdSupport.framework */,
 				612AD2D11C8E1AB7002DADB2 /* libsqlite3.tbd */,
@@ -210,7 +212,6 @@
 				611B9A751C95DD7B0003E865 /* FBSDKMessengerShareKit.framework */,
 				611B9A761C95DD7B0003E865 /* FBSDKShareKit.framework */,
 				612AD2CD1C8E1AA8002DADB2 /* SystemConfiguration.framework */,
-				612AD2CB1C8E1AA1002DADB2 /* StoreKit.framework */,
 				612AD2C91C8E1A98002DADB2 /* Security.framework */,
 				612AD2C71C8E1A8E002DADB2 /* QuartzCore.framework */,
 				612AD2C51C8E1A86002DADB2 /* CoreLocation.framework */,
@@ -356,6 +357,7 @@
 				6100E3301C8B3F5F009DB336 /* Images */,
 				613678031C94960900B48FFE /* ViewControllers */,
 				61F064BB1C7F7E4600E798BD /* Assets.xcassets */,
+				61080F801C9785A000043161 /* Jokester.entitlements */,
 				61F064B11C7F7E4600E798BD /* AppDelegate.swift */,
 			);
 			path = Jokester;
@@ -394,6 +396,15 @@
 				TargetAttributes = {
 					61F064AD1C7F7E4600E798BD = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = QLXFZ9H958;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -585,6 +596,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -597,6 +610,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polarhills.Jokester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Jokester/jokester-bridging-header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -606,6 +620,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Jokester",
@@ -617,6 +633,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polarhills.Jokester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Jokester/jokester-bridging-header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

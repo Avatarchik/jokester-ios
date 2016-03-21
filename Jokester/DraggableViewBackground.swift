@@ -25,6 +25,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var messageButton: UIButton!
     var likeButton: UIButton!
     var dislikeButton: UIButton!
+    var shareButton: UIButton!
     var activityIndicator = UIActivityIndicatorView()
     var total_swiped_cards = 0
     
@@ -41,10 +42,6 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var age_jokes = [Joke]();
     var gender_jokes = [Joke]();
     var joke_showing = [String:Bool]();
-    
-    func report_joke() {
-        UIApplication.sharedApplication().openURL(NSURL(string: "mailto:getjokester@gmail.com?subject=Report%20about%20joke:%20'\((loadedCards[0].objectId) as String)'")!)
-    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -172,26 +169,34 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         if(dislikeButton != nil) {
             dislikeButton.removeFromSuperview();
         }
+        if(shareButton != nil) {
+            shareButton.removeFromSuperview();
+        }
         self.screenWidth = screenSize.width
         self.screenHeight = screenSize.height - self.frame.origin.y
         self.CARD_WIDTH = screenWidth - 50;
         self.CARD_HEIGHT = screenWidth - 50;
         self.FULL_HEIGHT = screenWidth + 35;
         self.backgroundColor = UIColor.clearColor();
-        dislikeButton = UIButton(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2 + 25, self.screenHeight/2 - self.FULL_HEIGHT/2 - self.frame.origin.y + self.CARD_HEIGHT + 25, 60, 60))
+        shareButton = UIButton(frame: CGRectMake(self.frame.size.width/2 - 15, self.screenHeight/2 - self.FULL_HEIGHT/2 + 32 + self.CARD_HEIGHT + 40, 30, 30))
+        shareButton.setBackgroundImage(UIImage(named: "shareButton"), forState: UIControlState.Normal)
+        shareButton.userInteractionEnabled = true
+        shareButton.addTarget(self, action: "share", forControlEvents: UIControlEvents.TouchUpInside)
+        dislikeButton = UIButton(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2 + 25, self.screenHeight/2 - self.FULL_HEIGHT/2 + 32 + self.CARD_HEIGHT + 25, 60, 60))
         dislikeButton.setBackgroundImage(UIImage(named: "dislikeButtonActive"), forState: UIControlState.Normal)
         dislikeButton.userInteractionEnabled = true
         dislikeButton.addTarget(self, action: "swipeLeft", forControlEvents: UIControlEvents.TouchUpInside)
-        likeButton = UIButton(frame: CGRectMake(self.frame.size.width/2 + CARD_WIDTH/2 - 85, self.screenHeight/2 - self.FULL_HEIGHT/2 - self.frame.origin.y + self.CARD_HEIGHT + 25, 60, 60))
+        likeButton = UIButton(frame: CGRectMake(self.frame.size.width/2 + CARD_WIDTH/2 - 85, self.screenHeight/2 - self.FULL_HEIGHT/2 + 32 + self.CARD_HEIGHT + 25, 60, 60))
         likeButton.setBackgroundImage(UIImage(named: "likeButtonActive"), forState: UIControlState.Normal)
         likeButton.userInteractionEnabled = true
         likeButton.addTarget(self, action: "swipeRight", forControlEvents: UIControlEvents.TouchUpInside)
+        self.addSubview(shareButton)
         self.addSubview(dislikeButton)
         self.addSubview(likeButton)
     }
 
     func createDraggableViewWithDataAtIndex(index: NSInteger) -> DraggableView {
-        let draggableView = DraggableView(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2, self.screenHeight/2 - self.FULL_HEIGHT/2 - self.frame.origin.y, CARD_WIDTH, CARD_HEIGHT))
+        let draggableView = DraggableView(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2, self.screenHeight/2 - self.FULL_HEIGHT/2 + 32, CARD_WIDTH, CARD_HEIGHT))
         draggableView.joke.text = self.jokes[index].text
         draggableView.location.text = "";
         if(self.jokes[index].location.characters.count > 0) {
@@ -240,6 +245,10 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         if(total_swiped_cards % 5 == 0) {
             NSNotificationCenter.defaultCenter().postNotificationName("load_ad", object: nil);
         }
+    }
+    
+    func share() -> Void {
+        NSNotificationCenter.defaultCenter().postNotificationName("share_screen", object: nil);
     }
 
     func cardSwipedLeft(card: UIView) -> Void {
@@ -353,6 +362,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
             dragView.overlayView.alpha = 1
         })
         dragView.rightClickAction()
+        analytics_record_event("liked", interface: "MainViewController");
     }
 
     func swipeLeft() -> Void {
@@ -366,6 +376,54 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
             dragView.overlayView.alpha = 1
         })
         dragView.leftClickAction()
+        analytics_record_event("disliked", interface: "MainViewController");
+    }
+    
+    func report_joke() {
+        analytics_record_event("report", interface: "MainViewController");
+        let currentUser = PFUser.currentUser();
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let blockAction = UIAlertAction(title: "Block", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.swipeLeft()
+            currentUser?.addUniqueObject(self.loadedCards[0].userid, forKey: "blocked");
+            currentUser?.saveInBackground();
+            analytics_record_event("blocked", interface: "MainViewController");
+        })
+        let reportAction = UIAlertAction(title: "Report", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.swipeLeft()
+            let query = PFQuery(className:"Joke")
+            query.getObjectInBackgroundWithId(self.loadedCards[0].objectId) {
+                (joke: PFObject?, error: NSError?) -> Void in
+                if error != nil {
+                    print(error)
+                } else if let joke = joke {
+                    joke.incrementKey("reported", byAmount: 1);
+                    joke.addUniqueObject(currentUser!.objectId!, forKey: "reporters");
+                    joke.saveInBackground();
+                }
+            }
+            analytics_record_event("reported", interface: "MainViewController");
+        })
+        let contactAction = UIAlertAction(title: "Contact", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.swipeLeft();
+            UIApplication.sharedApplication().openURL(NSURL(string: "mailto:getjokester@gmail.com?subject=Regarding%20joke:%20'\((self.loadedCards[0].objectId) as String)'")!)
+            analytics_record_event("contacted", interface: "MainViewController");
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+        })
+        optionMenu.addAction(blockAction)
+        optionMenu.addAction(reportAction)
+        optionMenu.addAction(contactAction)
+        optionMenu.addAction(cancelAction)
+        var vc = UIApplication.sharedApplication().keyWindow?.rootViewController
+        while((vc!.presentedViewController) != nil) {
+            vc = vc!.presentedViewController
+        }
+        vc!.presentViewController(optionMenu, animated: true, completion: nil)
     }
     
 }

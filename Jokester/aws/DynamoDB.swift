@@ -71,7 +71,7 @@ func dynamodb_get_rows(myclass: AnyClass, filters: String, attributes: [NSObject
             return []
         }
         else {
-            return task.result!.items as! [AnyObject];
+            return task.result!.items! as! [AnyObject];
         }
     })
     return [];

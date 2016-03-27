@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6100E3321C8B3F6B009DB336 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6100E3311C8B3F6B009DB336 /* logo.png */; };
 		61080F821C97861C00043161 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61080F811C97861C00043161 /* StoreKit.framework */; };
-		611B9A781C95DD7B0003E865 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A721C95DD7B0003E865 /* FBAudienceNetwork.framework */; };
 		611B9A791C95DD7B0003E865 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A731C95DD7B0003E865 /* FBSDKCoreKit.framework */; };
 		611B9A7A1C95DD7B0003E865 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A741C95DD7B0003E865 /* FBSDKLoginKit.framework */; };
 		611B9A7B1C95DD7B0003E865 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611B9A751C95DD7B0003E865 /* FBSDKMessengerShareKit.framework */; };
@@ -62,6 +61,7 @@
 		614DB3211C91E49D0007900E /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614DB3201C91E49D0007900E /* WriteViewController.swift */; };
 		614DB3231C91E4A80007900E /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614DB3221C91E4A80007900E /* PointsViewController.swift */; };
 		615C220B1C94D1F00046907C /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615C220A1C94D1F00046907C /* GoogleMobileAds.framework */; };
+		61620EBB1CA61322005FB2C8 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61620EBA1CA61322005FB2C8 /* FBAudienceNetwork.framework */; };
 		61E9992A1C937AD80059B80D /* UICommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E999291C937AD80059B80D /* UICommon.swift */; };
 		61F064B21C7F7E4600E798BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F064B11C7F7E4600E798BD /* AppDelegate.swift */; };
 		61F064B41C7F7E4600E798BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F064B31C7F7E4600E798BD /* ViewController.swift */; };
@@ -75,7 +75,6 @@
 		6100E3311C8B3F6B009DB336 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		61080F801C9785A000043161 /* Jokester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Jokester.entitlements; sourceTree = "<group>"; };
 		61080F811C97861C00043161 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		611B9A721C95DD7B0003E865 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		611B9A731C95DD7B0003E865 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		611B9A741C95DD7B0003E865 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		611B9A751C95DD7B0003E865 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
@@ -130,6 +129,7 @@
 		614DB3201C91E49D0007900E /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		614DB3221C91E4A80007900E /* PointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
 		615C220A1C94D1F00046907C /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		61620EBA1CA61322005FB2C8 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		61E999291C937AD80059B80D /* UICommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICommon.swift; sourceTree = "<group>"; };
 		61F064AE1C7F7E4600E798BD /* Jokester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F064B11C7F7E4600E798BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +164,7 @@
 				611B9A7A1C95DD7B0003E865 /* FBSDKLoginKit.framework in Frameworks */,
 				612AD2C21C8E1A74002DADB2 /* CFNetwork.framework in Frameworks */,
 				612AD2C01C8E1A6A002DADB2 /* AudioToolbox.framework in Frameworks */,
+				61620EBB1CA61322005FB2C8 /* FBAudienceNetwork.framework in Frameworks */,
 				612AD2D71C8E1BA0002DADB2 /* Crashlytics.framework in Frameworks */,
 				612AD2BE1C8E1A31002DADB2 /* ParseUI.framework in Frameworks */,
 				612AD2BA1C8E1A31002DADB2 /* Parse.framework in Frameworks */,
@@ -175,7 +176,6 @@
 				612AD2F81C8E1C67002DADB2 /* AWSSNS.framework in Frameworks */,
 				612AD2F31C8E1C67002DADB2 /* AWSCloudWatch.framework in Frameworks */,
 				612AD2D61C8E1BA0002DADB2 /* Fabric.framework in Frameworks */,
-				611B9A781C95DD7B0003E865 /* FBAudienceNetwork.framework in Frameworks */,
 				611B9A791C95DD7B0003E865 /* FBSDKCoreKit.framework in Frameworks */,
 				612AD2F51C8E1C67002DADB2 /* AWSDynamoDB.framework in Frameworks */,
 				612AD2BD1C8E1A31002DADB2 /* ParseTwitterUtils.framework in Frameworks */,
@@ -198,6 +198,7 @@
 		612AD2B21C8E1A27002DADB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61620EBA1CA61322005FB2C8 /* FBAudienceNetwork.framework */,
 				61080F811C97861C00043161 /* StoreKit.framework */,
 				611B9A7F1C95DEEA0003E865 /* CoreMotion.framework */,
 				611B9A7D1C95DED80003E865 /* AdSupport.framework */,
@@ -206,7 +207,6 @@
 				612AD2D41C8E1BA0002DADB2 /* Fabric.framework */,
 				615C220A1C94D1F00046907C /* GoogleMobileAds.framework */,
 				612AD2D51C8E1BA0002DADB2 /* Crashlytics.framework */,
-				611B9A721C95DD7B0003E865 /* FBAudienceNetwork.framework */,
 				611B9A731C95DD7B0003E865 /* FBSDKCoreKit.framework */,
 				611B9A741C95DD7B0003E865 /* FBSDKLoginKit.framework */,
 				611B9A751C95DD7B0003E865 /* FBSDKMessengerShareKit.framework */,

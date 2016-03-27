@@ -134,7 +134,7 @@ class MainViewController: UIViewController, FBInterstitialAdDelegate {
         UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
         let shareItems:Array = [screenshot]
         let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
-        activityViewController.excludedActivityTypes = [UIActivityTypePostToFacebook, UIActivityTypePostToTwitter, UIActivityTypeMessage, UIActivityTypeMail, UIActivityTypeCopyToPasteboard, UIActivityTypePrint]
+        activityViewController.excludedActivityTypes = [UIActivityTypeCopyToPasteboard, UIActivityTypePrint]
         self.presentViewController(activityViewController, animated: true, completion: nil)
     }
 

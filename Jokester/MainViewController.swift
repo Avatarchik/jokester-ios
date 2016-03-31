@@ -131,10 +131,9 @@ class MainViewController: UIViewController, FBInterstitialAdDelegate {
         layer.renderInContext(UIGraphicsGetCurrentContext()!)
         let screenshot = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
         let shareItems:Array = [screenshot]
         let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
-        activityViewController.excludedActivityTypes = [UIActivityTypeCopyToPasteboard, UIActivityTypePrint]
+        activityViewController.excludedActivityTypes = [UIActivityTypePrint]
         self.presentViewController(activityViewController, animated: true, completion: nil)
     }
 
